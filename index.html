@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlassShop - E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-image">
+
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="nav-left">
+      <div class="nav-brand">GlassShop</div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Cart icon -->
+      <div class="cart-icon" id="cartBtn">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+    </div>
+  </nav>
+
+  <!-- CART PANEL -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+
+  <aside id="cartPanel" class="cart-panel glass">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="cart-close-btn">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-primary cart-checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-text glass">
+      <h1>Shop the Latest Trends</h1>
+      <p>Discover premium products at unbeatable prices. Fast delivery, secure payments, and a seamless shopping experience.</p>
+      <a href="#products" class="btn-primary">Browse Products</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="assets/hero.jpg" alt="Happy customer shopping">
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTERS + SEARCH -->
+  <section class="product-controls glass">
+    <div class="control-left">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fashion">Fashion</button>
+      <button class="filter-btn" data-filter="electronics">Electronics</button>
+      <button class="filter-btn" data-filter="home">Home</button>
+      <button class="filter-btn" data-filter="beauty">Beauty</button>
+    </div>
+    <div class="control-right">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section id="products" class="products-section">
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="products-grid" id="productGrid">
+
+      <!-- Product card -->
+      <div class="product-card glass"
+           data-category="fashion"
+           data-name="Classic Denim Jacket"
+           data-price="1999">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Classic Denim Jacket</h3>
+        <p class="product-desc">Timeless denim jacket perfect for everyday style.</p>
+        <div class="product-meta">
+          <span class="price">₹1,999</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card glass"
+           data-category="fashion"
+           data-name="Minimal Sneakers"
+           data-price="2499">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Minimal Sneakers</h3>
+        <p class="product-desc">Lightweight, comfortable sneakers for daily wear.</p>
+        <div class="product-meta">
+          <span class="price">₹2,499</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card glass"
+           data-category="electronics"
+           data-name="Wireless Headphones"
+           data-price="2999">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Wireless Headphones</h3>
+        <p class="product-desc">Noise-cancelling, long battery life, premium sound.</p>
+        <div class="product-meta">
+          <span class="price">₹2,999</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card glass"
+           data-category="home"
+           data-name="Modern Table Lamp"
+           data-price="899">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Modern Table Lamp</h3>
+        <p class="product-desc">Soft warm light, perfect for your desk or bedside.</p>
+        <div class="product-meta">
+          <span class="price">₹899</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card glass"
+           data-category="beauty"
+           data-name="Skincare Essentials Kit"
+           data-price="1599">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Skincare Essentials Kit</h3>
+        <p class="product-desc">Cleanser, serum & moisturizer for glowing skin.</p>
+        <div class="product-meta">
+          <span class="price">₹1,599</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card glass"
+           data-category="electronics"
+           data-name="Smartwatch Pro"
+           data-price="3499">
+        <div class="product-img placeholder-img">IMG</div>
+        <h3>Smartwatch Pro</h3>
+        <p class="product-desc">Track health, notifications and workouts in style.</p>
+        <div class="product-meta">
+          <span class="price">₹3,499</span>
+          <button class="btn-small add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="about" class="services">
+    <h2 class="section-title">Why Choose GlassShop?</h2>
+
+    <div class="service-container">
+      <div class="service-card glass">
+        <h3>Premium Quality</h3>
+        <p>We handpick products from trusted brands to ensure top-notch quality.</p>
+      </div>
+
+      <div class="service-card glass">
+        <h3>Fast Delivery</h3>
+        <p>Pan-India delivery with real-time tracking and reliable partners.</p>
+      </div>
+
+      <div class="service-card glass">
+        <h3>Secure Payments</h3>
+        <p>Multiple secure payment options with encrypted transactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+
+    <div class="testimonials-row">
+      <div class="testimonial-card glass">
+        <p>“Amazing quality and super fast delivery. The website feels very premium.”</p>
+        <h4>— Ananya, Mumbai</h4>
+      </div>
+      <div class="testimonial-card glass">
+        <p>“Loved the clean UI and easy checkout. I’ll definitely shop again.”</p>
+        <h4>— Rohan, Pune</h4>
+      </div>
+      <div class="testimonial-card glass">
+        <p>“Customer support was very helpful. The cart and filters work smoothly.”</p>
+        <h4>— Sarthak, Bengaluru</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact glass">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="contact-text">Have questions, feedback or bulk orders? Reach out to us.</p>
+
+    <form class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>GlassShop</h3>
+        <p>Premium e-commerce experience with a clean glassmorphic design.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Email: support@glassshop.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+
+    <p class="footer-bottom">© 2025 GlassShop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
